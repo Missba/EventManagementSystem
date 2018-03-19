@@ -1,0 +1,94 @@
+﻿
+@{
+    ViewBag.Title = "Contact";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    #map {
+        height: 400px;
+        width: 600px;
+    }
+</style>
+
+<div class="panel panel-default">
+    <div class="panel-heading">Contact US</div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-offset-2 col-md-4">
+                Missba Banu
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-offset-2 col-md-4">
+                HotLine:+8801567890987</div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-offset-2 col-md-4">
+                Whatsapp & Viber:+8801568990987
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-offset-2 col-md-4">
+                Email:<a href="#">missbabanu@gmail.com</a>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-offset-2 col-md-4">
+                House# 7, Road# 1, Block# B, Niketon, Gulshan-1, Dhaka 1212
+            </div>
+        </div>
+       
+        <div class="row">
+            <div class="col-md-offset-2 col-md-4">
+                Corporate Office:
+                Saimon Center, 4th Floor, House# 4/A, Road# 22, Gulshan-1, Dhaka 1212
+            </div>
+        </div>
+        <div class="row"></div>
+        <div class="row col-md-offset-2 col-md-8" id="map"></div>
+        </div>
+   
+    </div>
+
+<script>
+      function initMap() {
+          var pos = { lat: 23.810332, lng: 90.412518 };
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom:8,
+          center: pos
+        });
+        var contentString = '<div id="content">' +
+          '<div id="siteNotice">' +
+          '</div>' +
+          '<h3 id="firstHeading" class="firstHeading">Event Management System</h3>' +
+          '<div id="bodyContent">' +
+          '<p><b>Address</b></p>'+
+          '<p>House# 7, Road# 1, Block# B, Niketon, Gulshan-1, Dhaka 1212</p>'+
+          '<p>Corporate Office: Saimon Center, 4th Floor, House# 4/A, Road# 22, Gulshan-1, Dhaka 1212</p>'+
+          '</div>' +
+          '</div>';
+
+        var infowindow = new google.maps.InfoWindow({
+            content: contentString,
+            maxWidth:200
+        });
+        var marker = new google.maps.Marker({
+          position: pos,
+          map: map
+        });
+        marker.addListener('mouseover', function () {
+            infowindow.open(map, marker);
+        });
+        marker.addListener('mouseout', function () {
+            infowindow.close(map, marker);
+        });
+      }
+</script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGNB45yhis9jPVr-xQQqUQwPEsUxedFnU&callback=initMap">
+</script>
+

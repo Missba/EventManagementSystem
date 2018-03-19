@@ -1,0 +1,81 @@
+.img{
+	padding:10px;
+	background-color:white;
+	height:200px;
+	width:250px;
+}
+.jambo
+{
+	height:220px;
+	background-color:#34ea43;
+	color:white;
+
+}
+
+
+#Container_Carousel{
+
+    margin:0;
+    padding:0px;
+    width:100%;
+
+}
+
+.con
+{
+	text-align: left;
+	font-size: 30px;
+	color: #34ea43;
+}
+ 
+body
+{
+	padding-top: 40px;
+}
+.des
+{
+	margin:10px;
+	padding:40px;
+	height:450px;
+	width:800px;
+	background-color:#34ea43;
+	color:white; 
+	text-align: center;
+	margin-left: 100px;
+	padding-top: 60px;
+}
+input
+{
+	width:250px;
+}
+.login
+{
+
+	
+	height:550px;
+	width:800px;
+	background-color:#34ea43;
+	color:white; 
+	text-align: center;
+	
+	padding-top: 60px;
+}
+.header
+{
+	color:#34ea43;
+	font-size: 20px;
+	font-style: bold;
+	text-align: center;
+}
+.header1
+{
+	color:#34ea43;
+	font-size: 20px;
+	font-style: bold;
+	text-align: center;
+}
+.size
+{
+	height:300px;
+
+}

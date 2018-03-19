@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewBag.Title = "Logout";
+    Layout = "~/Views/Shared/AuthorizedLayout.cshtml";
+}
+
+   @{if (Session["userName"] == null)
+       {
+           Response.Redirect("~/Home/Index");
+       }
+   }
+
+
+

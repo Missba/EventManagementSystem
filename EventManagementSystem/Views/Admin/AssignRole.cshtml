@@ -1,0 +1,60 @@
+﻿@model EventManagementSystem.Models.Account.AssignRole
+
+@{
+    ViewBag.Title = "AssignRole";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>AssignRole</h2>
+
+@using (Html.BeginForm())
+{
+
+
+  
+        <h4>AssignRole</h4>
+        <hr />
+      
+                <div class="form-group row">
+                   
+                        @Html.LabelFor(model => model.EmployeeId, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.DropDownListFor(model => model.EmployeeId, new SelectList(@ViewBag.Id))
+                            @Html.ValidationMessageFor(model => model.EmployeeId, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+             
+           
+                <div class="form-group row">
+                    @Html.LabelFor(model => model.Role, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.DropDownListFor(model => model.Role,new SelectList(ViewBag.items,"Value","Text"), new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Role, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    @Html.LabelFor(model => model.CurrentRole, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.DropDownListFor(model => model.CurrentRole, new SelectList(ViewBag.items, "Value", "Text"), new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.CurrentRole, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Create" class="btn btn-default" />
+                    </div>
+                </div>
+           
+        <div class="col-md-offset-8 col-md-2">
+            <div>
+                <p>@Html.ActionLink("Add Employee", "Create", "Admin");</p>
+                <p>@Html.ActionLink("Assign Role", "AssignRole", "Admin");</p>
+            </div>
+        </div>
+        }
+
+        <div>
+            @Html.ActionLink("Back to List", "Index")
+        </div>

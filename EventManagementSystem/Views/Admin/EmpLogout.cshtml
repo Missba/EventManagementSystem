@@ -1,0 +1,12 @@
+﻿
+@{
+    ViewBag.Title = "EmpLogout";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>EmpLogout</h2>
+@if(Session["user"]==null)
+{
+    Response.Redirect("~/Authorized/BookingHistory");
+}
+
